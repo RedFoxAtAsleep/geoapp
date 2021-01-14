@@ -138,7 +138,7 @@ def run(verbose=True):
     lm = LayerMapping(WorldBorder, str(world_shp), world_mapping, transform=False)
     lm.save(strict=True, verbose=verbose)
 
-run()
+# run()
 
 
 

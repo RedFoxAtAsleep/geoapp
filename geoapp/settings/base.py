@@ -35,7 +35,7 @@ sys.path.insert(0, os.path.join(BASE_DIR, 'extrapps'))
 SECRET_KEY = 'iyi@jdi0r4#$6gju4=ns6jzd$6#5tusal#ekd69&_dgh!p#k#8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -107,10 +107,10 @@ DATABASES = {
     },
     'gis': {
         'ENGINE':'django.contrib.gis.db.backends.postgis',
-        'NAME': 'geo',
+        'NAME': 'postgres',
         'USER': 'postgres',
         'PASSWORD': '123456',
-        'HOST': 'somepostgres',
+        'HOST': 'postgres',
         'PORT': '5432',
     }
 }
