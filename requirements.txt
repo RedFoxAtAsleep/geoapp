@@ -12,3 +12,7 @@ xlsxwriter
 psycopg2-binary
 gunicorn
 supervisor
+djangorestframework
+django-filter
+markdown
+djangorestframework-gis==0.3

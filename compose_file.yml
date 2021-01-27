@@ -1,0 +1,28 @@
+buildversion: '3'
+networks:
+  geoproject: ''
+services:
+  filehub:
+    build:
+      args:
+        IMAGE: busybox:1.32
+      context: ./filehub
+      dockerfile: Dockerfile
+    cap_add:
+    - ALL
+    command: echo "container"
+    'depends_on ': []
+    dns:
+    - 8.8.8.8
+    - 114.114.114.114
+    environment:
+    - HOST_GEOPROJECT=/opt/geoproject
+    - HOST_LOG=/opt/log
+    networks:
+    - geoproject
+    ports: []
+    restart: always
+    volumes:
+    - /Users/zhaojinhui/Documents/github/geoproject:/opt/geoproject
+    - /Users/zhaojinhui/Downloads/log:/opt/log
+volumes: {}

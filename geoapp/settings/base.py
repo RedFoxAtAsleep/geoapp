@@ -57,6 +57,8 @@ INSTALLED_APPS = [
     'reversion',  # django-reversion
     'world',
     'xadmin',
+    'rest_framework',
+    'rest_framework_gis',
 ]
 
 MIDDLEWARE = [
@@ -188,4 +190,9 @@ LOGGING = {
             'propagate': False
         },
     }
+}
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10
 }
